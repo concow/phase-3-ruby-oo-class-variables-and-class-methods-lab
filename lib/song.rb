@@ -32,10 +32,10 @@ class Song
     def self.genre_count
         genre_count = {}
         @@genres.each do |genre|
-            if genre_count[genre]
-                genre_count[genre] += 1 
+            if genre_count[genre]               #see if hash already hasa key of a particular genre 
+                genre_count[genre] += 1         #If so, increment value by 1
             else
-                genre_count[genre] = 1
+                genre_count[genre] = 1          #otherwise, create a new key/value pair
             end
         end
         return genre_count
